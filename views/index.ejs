@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title><%= content.hero_title %></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Lojistik ve taşımacılık hizmetleri - Nova Lojistik">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="#hero">Nova Lojistik</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="mainNav" class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="#about">Hakkımızda</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services">Hizmetler</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">İletişim</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section id="hero" class="hero">
+  <div class="container py-5">
+    <div class="row align-items-center g-4">
+      <div class="col-lg-6">
+        <div class="pill mb-3">
+          <span class="pill-dot"></span>
+          <span>7/24 takip edilebilir lojistik çözümler</span>
+        </div>
+        <h1 class="mb-3"><%= content.hero_title %></h1>
+        <p class="mb-4"><%= content.hero_subtitle %></p>
+        <a href="#contact" class="btn btn-primary-soft btn-lg px-4"><%= content.hero_cta %></a>
+        <p class="mt-3 text-muted small">Karayolu, denizyolu ve havayolu taşımacılığında tek noktadan yönetim.</p>
+      </div>
+      <div class="col-lg-6">
+        <div class="border rounded-4 p-3 bg-white shadow-sm">
+          <div class="row g-3">
+            <div class="col-6">
+              <div class="service-card h-100">
+                <div class="service-icon">TIR</div>
+                <h6>Karayolu Ağı</h6>
+                <p class="mb-0 small text-muted">Türkiye geneli günlük çıkışlı parsiyel & komple taşımalar.</p>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="service-card h-100">
+                <div class="service-icon">✈️</div>
+                <h6>Uluslararası</h6>
+                <p class="mb-0 small text-muted">Avrupa ve Orta Doğu odaklı ithalat & ihracat taşımaları.</p>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="service-card h-100">
+                <div class="service-icon">📦</div>
+                <h6>Depolama & Dağıtım</h6>
+                <p class="mb-0 small text-muted">Stok yönetimi, sipariş hazırlama ve teslimat çözümleri.</p>
+              </div>
+            </div>
+          </div>
+          <p class="mt-3 mb-0 text-muted small">Gerçek firma bilgilerini admin panelden dilediğiniz zaman güncelleyebilirsiniz.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="py-5">
+  <div class="container">
+    <div class="row g-4 align-items-center">
+      <div class="col-lg-6">
+        <h2 class="section-title"><%= content.about_title %></h2>
+        <p class="section-subtitle"><%= content.about_text %></p>
+      </div>
+      <div class="col-lg-6">
+        <div class="border rounded-4 p-4 bg-light">
+          <h6 class="mb-2">Neden Nova Lojistik?</h6>
+          <ul class="mb-0 text-muted">
+            <li>Gerçek zamanlı yük takibi</li>
+            <li>Sigortalı taşımacılık</li>
+            <li>Deneyimli operasyon ekibi</li>
+            <li>Esnek fiyatlandırma modelleri</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="section-title mb-2"><%= content.services_title %></h2>
+    <p class="section-subtitle mb-4">Firmanızın ihtiyacına göre özelleştirilebilir lojistik çözümler sunuyoruz.</p>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="service-card">
+          <div class="service-icon">🚚</div>
+          <h5><%= content.service1_title %></h5>
+          <p class="text-muted mb-0"><%= content.service1_text %></p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="service-card">
+          <div class="service-icon">🌍</div>
+          <h5><%= content.service2_title %></h5>
+          <p class="text-muted mb-0"><%= content.service2_text %></p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="service-card">
+          <div class="service-icon">🏢</div>
+          <h5><%= content.service3_title %></h5>
+          <p class="text-muted mb-0"><%= content.service3_text %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="py-5">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <h2 class="section-title mb-2"><%= content.contact_title %></h2>
+        <p class="section-subtitle mb-4"><%= content.contact_text %></p>
+        <div class="contact-card mb-3">
+          <p class="mb-1"><strong>Telefon:</strong> <%= content.company_phone %></p>
+          <p class="mb-1"><strong>E-posta:</strong> <%= content.company_email %></p>
+          <p class="mb-0"><strong>Adres:</strong> <%= content.company_address %></p>
+        </div>
+        <p class="text-muted small">Firmanın gerçek iletişim bilgilerini admin panelden güncelleyebilirsiniz.</p>
+      </div>
+      <div class="col-lg-6">
+        <div class="contact-card">
+          <h6 class="mb-3">Hızlı İletişim Formu</h6>
+          <form>
+            <div class="mb-2">
+              <input type="text" class="form-control" placeholder="Adınız">
+            </div>
+            <div class="mb-2">
+              <input type="email" class="form-control" placeholder="E-posta adresiniz">
+            </div>
+            <div class="mb-2">
+              <textarea class="form-control" rows="3" placeholder="Göndermek istediğiniz mesaj"></textarea>
+            </div>
+            <button type="button" class="btn btn-primary-soft w-100">Gönder (Demo)</button>
+            <p class="mt-2 mb-0 text-muted small">Form demo amaçlıdır. İsterseniz gerçek e-posta entegrasyonu ekleyebiliriz.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container d-flex justify-content-between align-items-center">
+    <span>© <%= new Date().getFullYear() %> Nova Lojistik. Tüm hakları saklıdır.</span>
+    <span class="small">Site yönetimi: Admin panel üzerinden içerik düzenlenebilir.</span>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
