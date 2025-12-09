@@ -2,23 +2,101 @@ body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
-.hero {
-  min-height: 80vh;
-  background: linear-gradient(135deg, #0f172a, #1e293b);
+/* TOPBAR */
+
+.topbar {
+  height: 40px;
+  background: #020617;
   color: #e5e7eb;
-  display: flex;
-  align-items: center;
+  font-size: 0.8rem;
 }
 
-.hero h1 {
+.topbar-left span {
+  opacity: 0.9;
+}
+
+.topbar i {
+  font-size: 0.85rem;
+  margin-right: 4px;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.topbar-icon {
+  width: 26px;
+  height: 26px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(148, 163, 184, 0.6);
+  color: #e5e7eb;
+  font-size: 0.9rem;
+  transition: all 0.15s ease;
+}
+
+.topbar-icon:hover {
+  background: #0ea5e9;
+  border-color: #0ea5e9;
+  color: #020617;
+}
+
+/* NAVBAR */
+
+.main-navbar {
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.nav-link {
+  font-size: 0.95rem;
+}
+
+/* HERO BANNER */
+
+.hero-banner {
+  position: relative;
+  min-height: 80vh;
+  color: #f9fafb;
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("/img/truck-fleet.jpg"); /* KENDİ GÖRSEL YOLUNU BURAYA KOY */
+}
+
+/* Üstüne hafif filtre */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.65), rgba(15, 23, 42, 0.9));
+}
+
+.hero-container {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-banner h1 {
   font-size: clamp(2.4rem, 3.2vw, 3.4rem);
   font-weight: 700;
 }
 
-.hero p {
+.hero-banner p {
   font-size: 1.05rem;
   max-width: 520px;
 }
+
+/* GENEL BİLEŞENLER */
 
 .section-title {
   font-weight: 700;
@@ -35,7 +113,8 @@ body {
   border: 1px solid #e5e7eb;
   padding: 20px;
   height: 100%;
-  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+  background: #ffffff;
 }
 
 .service-card:hover {
@@ -56,44 +135,44 @@ body {
   margin-bottom: 10px;
 }
 
-.navbar-brand {
-  font-weight: 700;
-  letter-spacing: .03em;
-}
+/* HERO İÇİ KARTLAR */
 
-.nav-link {
-  font-size: 0.95rem;
-}
-
-.contact-card {
+.hero-info-card {
+  background: rgba(15, 23, 42, 0.8);
   border-radius: 18px;
-  border: 1px solid #e5e7eb;
-  padding: 20px;
+  border: 1px solid rgba(148, 163, 184, 0.6);
+  padding: 18px;
+  backdrop-filter: blur(10px);
 }
 
-footer {
-  background: #020617;
+.stat-card {
+  border-radius: 14px;
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.stat-value {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.stat-label {
+  font-size: 0.75rem;
   color: #9ca3af;
-  padding: 16px 0;
-  font-size: 0.85rem;
 }
 
-.btn-primary-soft {
-  background: #0ea5e9;
-  border: none;
-  color: white;
-}
-
-.btn-primary-soft:hover {
-  background: #0284c7;
-}
+/* PİLL */
 
 .pill {
   border-radius: 999px;
   padding: 6px 14px;
   font-size: 0.8rem;
-  background: rgba(15, 118, 110, .1);
-  color: #0f766e;
+  background: rgba(15, 118, 110, 0.1);
+  color: #a5f3fc;
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -105,6 +184,102 @@ footer {
   border-radius: 999px;
   background: #22c55e;
 }
+
+/* FLEET CARDS */
+
+.fleet-card {
+  border-radius: 18px;
+  border: 1px solid #e5e7eb;
+  padding: 18px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+}
+
+.fleet-label {
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+.fleet-value {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.fleet-sub {
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+/* CLIENT BADGES */
+
+.client-badge {
+  border-radius: 999px;
+  border: 1px solid #e5e7eb;
+  padding: 10px 16px;
+  text-align: center;
+  font-size: 0.9rem;
+  background: #ffffff;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.04);
+}
+
+/* TESTIMONIALS */
+
+.testimonial-card {
+  border-radius: 18px;
+  border: 1px solid #e5e7eb;
+  padding: 24px;
+  background: #ffffff;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.testimonial-text {
+  font-size: 0.95rem;
+  color: #4b5563;
+  margin-bottom: 12px;
+}
+
+.testimonial-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.testimonial-name {
+  font-weight: 600;
+}
+
+.testimonial-role {
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+/* CONTACT */
+
+.contact-card {
+  border-radius: 18px;
+  border: 1px solid #e5e7eb;
+  padding: 20px;
+  background: #ffffff;
+}
+
+/* BUTTONS */
+
+.btn-primary-soft {
+  background: #0ea5e9;
+  border: none;
+  color: white;
+}
+
+.btn-primary-soft:hover {
+  background: #0284c7;
+}
+
+/* ADMIN TARAFI İÇİN ORTAK STİLLER (ESKİLER) */
 
 .admin-body {
   background: #0b1120;
@@ -123,7 +298,7 @@ footer {
 
 .badge-section {
   border-radius: 999px;
-  background: rgba(148, 163, 184, .1);
+  background: rgba(148, 163, 184, 0.1);
   color: #9ca3af;
   font-size: 0.75rem;
 }
@@ -133,20 +308,24 @@ label {
   color: #9ca3af;
 }
 
-.form-control, textarea {
+.form-control,
+textarea {
   background: #020617;
   border-color: #1f2937;
   color: #e5e7eb;
 }
 
-.form-control:focus, textarea:focus {
-  box-shadow: 0 0 0 0.1rem rgba(14, 165, 233, .5);
+.form-control:focus,
+textarea:focus {
+  box-shadow: 0 0 0 0.1rem rgba(14, 165, 233, 0.5);
 }
+
+/* GLASS LOGIN CARD */
 
 .glass-card {
   border-radius: 18px;
-  border: 1px solid rgba(148, 163, 184, .4);
-  background: rgba(15, 23, 42, .9);
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  background: rgba(15, 23, 42, 0.9);
   backdrop-filter: blur(14px);
 }
 
@@ -154,14 +333,19 @@ label {
   border-radius: 999px;
   padding: 4px 10px;
   font-size: 0.75rem;
-  background: rgba(15, 118, 110, .2);
+  background: rgba(15, 118, 110, 0.2);
   color: #a5f3fc;
+}
+
+/* FOOTER */
+
+.site-footer {
+  background: #020617;
+  color: #9ca3af;
+  padding: 16px 0;
+  font-size: 0.85rem;
 }
 
 .small {
   font-size: 0.85rem;
-}
-
-.tiny {
-  font-size: 0.75rem;
 }
