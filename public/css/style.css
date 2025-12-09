@@ -71,7 +71,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url("/MTU4YTMyM2Y2MDVhZjc.jpg"); /* KENDİ GÖRSEL YOLUNU BURAYA KOY */
+  background-image: url("//MTU4YTMyM2Y2MDVhZjc.jpg"); /* KENDİ GÖRSEL YOLUNU BURAYA KOY */
 }
 
 /* Üstüne hafif filtre */
